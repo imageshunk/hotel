@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYMENT=/home/nethunk1/public_html/
+    - /bin/cp -R /home/nethunk1/repositories/hotel/ $DEPLOYMENT
