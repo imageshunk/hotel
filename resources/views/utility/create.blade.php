@@ -17,7 +17,12 @@
             {{Form::text('description', '', ['class' => 'form-control', 'placeholder' => 'Description'])}}
         </div>
         <div class="form-group">
-            <?php $setting = App\Setting::first(); ?>
+            <?php
+                $setting = App\Setting::first();
+                if($setting->currency == null){
+                    $setting->currency = 'USD';
+                }
+            ?>
             {{Form::label('price', 'Price (in '.$setting->currency.')')}}
             {{Form::number('price', '', ['class' => 'form-control', 'placeholder' => 'Price'])}}
         </div>
