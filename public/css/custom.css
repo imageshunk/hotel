@@ -1,0 +1,46 @@
+.modal-dialog{
+    width: 75%;
+}
+
+#add-room .modal-dialog{
+    width: 30%;
+}
+
+.service-modal{
+    min-width: 75% !important;
+}
+
+.service-modal .nav-tabs-custom ul li{
+    width: 24% !important;
+}
+
+#foods label {
+    width: 100%;
+    border-radius:7px;
+    -webkit-font-smoothing: antialiased; 
+    font-family:Arial,Helvetica,sans-serif;
+    color:gray;
+    text-align:center;
+    background-color: #ccc;
+}
+
+#foods input[type=checkbox] {
+    display: none;
+}
+
+#foods input:checked + label {
+    background-color: rgb(5, 61, 5);
+    color: #fff;
+}
+
+.hover-item:hover {
+	background-color: rgb(122, 28, 28);
+}
+
+#new-guest .modal-dialog{
+    max-width: 30% !important;
+}
+
+#generate-invoice .modal-dialog{
+    max-width: 30% !important;
+}

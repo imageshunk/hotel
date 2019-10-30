@@ -1,0 +1,18 @@
+[03-Mar-2019 16:32:20 UTC] PHP Fatal error:  Uncaught ErrorException: file_put_contents(C:\xampp\htdocs\danny4\storage\framework\views/97b83e2b98daff668fbec2d6117e4038a9257005.php): failed to open stream: No such file or directory in /home1/outlandergallery/mission.outlandergallery.com/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:122
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/home1/outlande...', 122, Array)
+#1 /home1/outlandergallery/mission.outlandergallery.com/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(122): file_put_contents('C:\\xampp\\htdocs...', '<?php $__env->s...', 0)
+#2 /home1/outlandergallery/mission.outlandergallery.com/vendor/laravel/framework/src/Illuminate/View/Compilers/BladeCompiler.php(122): Illuminate\Filesystem\Filesystem->put('C:\\xampp\\htdocs...', '<?php $__env->s...')
+#3 /home1/outlandergallery/mission.outlandergallery.com/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(51): Illumin in /home1/outlandergallery/mission.outlandergallery.com/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php on line 122
+[03-Mar-2019 16:32:30 UTC] PHP Fatal error:  Uncaught ErrorException: file_put_contents(C:\xampp\htdocs\danny4\storage\framework\views/97b83e2b98daff668fbec2d6117e4038a9257005.php): failed to open stream: No such file or directory in /home1/outlandergallery/mission.outlandergallery.com/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:122
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/home1/outlande...', 122, Array)
+#1 /home1/outlandergallery/mission.outlandergallery.com/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(122): file_put_contents('C:\\xampp\\htdocs...', '<?php $__env->s...', 0)
+#2 /home1/outlandergallery/mission.outlandergallery.com/vendor/laravel/framework/src/Illuminate/View/Compilers/BladeCompiler.php(122): Illuminate\Filesystem\Filesystem->put('C:\\xampp\\htdocs...', '<?php $__env->s...')
+#3 /home1/outlandergallery/mission.outlandergallery.com/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(51): Illumin in /home1/outlandergallery/mission.outlandergallery.com/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php on line 122
+[03-Mar-2019 16:32:35 UTC] PHP Fatal error:  Uncaught ErrorException: file_put_contents(C:\xampp\htdocs\danny4\storage\framework\views/97b83e2b98daff668fbec2d6117e4038a9257005.php): failed to open stream: No such file or directory in /home1/outlandergallery/mission.outlandergallery.com/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:122
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/home1/outlande...', 122, Array)
+#1 /home1/outlandergallery/mission.outlandergallery.com/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(122): file_put_contents('C:\\xampp\\htdocs...', '<?php $__env->s...', 0)
+#2 /home1/outlandergallery/mission.outlandergallery.com/vendor/laravel/framework/src/Illuminate/View/Compilers/BladeCompiler.php(122): Illuminate\Filesystem\Filesystem->put('C:\\xampp\\htdocs...', '<?php $__env->s...')
+#3 /home1/outlandergallery/mission.outlandergallery.com/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(51): Illumin in /home1/outlandergallery/mission.outlandergallery.com/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php on line 122
