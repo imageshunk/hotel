@@ -19,7 +19,7 @@
         <div class="form-group">
             <?php
                 $setting = App\Setting::first();
-                if($setting->currency == null){
+                if($setting == null){
                     $setting->currency = 'USD';
                 }
             ?>
