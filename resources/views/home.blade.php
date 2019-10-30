@@ -215,5 +215,5 @@
 @stop
 
 @section('css')
-    <link rel="stylesheet" href="/css_custom.css">
+    <link rel="stylesheet" href="/css/custom.css">
 @stop

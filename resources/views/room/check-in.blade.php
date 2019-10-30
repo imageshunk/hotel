@@ -128,7 +128,7 @@
 @stop
 
 @section('css')
-    <link rel="stylesheet" href="/css_custom.css">
+    <link rel="stylesheet" href="/css/custom.css">
 @stop
 
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
