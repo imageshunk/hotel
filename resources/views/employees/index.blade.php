@@ -30,7 +30,7 @@
                         </tr>
                         @foreach($employees as $employee)
                             <tr>
-                                <td>{{$employee->id}}</td>
+                                <td>{{$loop->iteration}}</td>
                                 <td>{{$employee->name}}</td>
                                 <td>{{$employee->email}}</td>
                                 <td style="text-transform:capitalize">{{$employee->role}}</td>
