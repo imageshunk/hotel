@@ -13,6 +13,7 @@ use Carbon\Carbon;
 use PDF;
 use Spatie\Permission\Models\Role;
 use Spatie\Permission\Models\Permission;
+use App\Setting;
 
 class ReportsController extends Controller
 {
@@ -26,7 +27,12 @@ class ReportsController extends Controller
         $this->middleware('auth');
     }
     
-    public function index(){
+    public function index()
+    {
+
+        if(Setting::first() == null){
+            return redirect('/settings')->with('error', 'Site Settings needs to be filled!');
+        }
         if(!auth()->user()->hasRole('admin')){
             return redirect()->back()->with('error', 'Sorry, You are not authorized');
         }

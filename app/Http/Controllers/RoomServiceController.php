@@ -7,6 +7,7 @@ use App\CheckIn;
 use App\Room;
 use Spatie\Permission\Models\Role;
 use Spatie\Permission\Models\Permission;
+use App\Setting;
 
 class RoomServiceController extends Controller
 {
@@ -20,7 +21,12 @@ class RoomServiceController extends Controller
         $this->middleware('auth');
     }
     
-    public function index(){
+    public function index()
+    {
+
+        if(Setting::first() == null){
+            return redirect('/settings')->with('error', 'Site Settings needs to be filled!');
+        }
         if(!auth()->user()->hasAnyRole(Role::all())){
             return redirect()->back()->with('error', 'Sorry, You are not authorized');
         }

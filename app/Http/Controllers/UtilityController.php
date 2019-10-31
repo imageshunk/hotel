@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Utility;
 use Spatie\Permission\Models\Role;
 use Spatie\Permission\Models\Permission;
+use App\Setting;
 
 class UtilityController extends Controller
 {
@@ -26,6 +27,9 @@ class UtilityController extends Controller
      */
     public function index()
     {
+        if(Setting::first() == null){
+            return redirect('/settings')->with('error', 'Site Settings needs to be filled!');
+        }
         if(auth()->user()->role != 'admin'){
             return redirect()->back()->with('error', 'Sorry, You are not authorized');
         }

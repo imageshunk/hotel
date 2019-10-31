@@ -7,6 +7,7 @@ use App\Cart;
 use App\Item;
 use Spatie\Permission\Models\Role;
 use Spatie\Permission\Models\Permission;
+use App\Setting;
 
 class CartController extends Controller
 {

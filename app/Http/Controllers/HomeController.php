@@ -43,7 +43,7 @@ class HomeController extends Controller
             }
             return view('home');
         }else{
-            return redirect('/settings');
+            return redirect('/settings')->with('error', 'Site Settings needs to be filled!');
         }
     }
 }

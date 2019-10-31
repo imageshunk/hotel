@@ -8,6 +8,7 @@ use App\Item;
 use App\Restuarent;
 use Spatie\Permission\Models\Role;
 use Spatie\Permission\Models\Permission;
+use App\Setting;
 
 class RestuarentController extends Controller
 {

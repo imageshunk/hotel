@@ -8,6 +8,7 @@ use App\Package;
 use App\Room;
 use Spatie\Permission\Models\Role;
 use Spatie\Permission\Models\Permission;
+use App\Setting;
 
 class CheckInController extends Controller
 {
@@ -28,6 +29,9 @@ class CheckInController extends Controller
      */
     public function index()
     {
+        if(Setting::first() == null){
+            return redirect('/settings')->with('error', 'Site Settings needs to be filled!');
+        }
         if(!auth()->user()->hasAnyRole(Role::all())){
             return redirect()->back()->with('error', 'You are not authorized');
         }

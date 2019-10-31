@@ -8,6 +8,7 @@ use App\CheckIn;
 use App\Event;
 use Spatie\Permission\Models\Role;
 use Spatie\Permission\Models\Permission;
+use App\Setting;
 
 class EventController extends Controller
 {
@@ -27,7 +28,13 @@ class EventController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
+    
     {
+
+        if(Setting::first() == null){
+            return redirect('/settings')->with('error', 'Site Settings needs to be filled!');
+        }
+
         if(!auth()->user()->hasRole('admin')){
             return redirect()->back()->with('error', 'Sorry, You are not authorized');
         }

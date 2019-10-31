@@ -19,7 +19,8 @@ class SettingsController extends Controller
         $this->middleware('auth');
     }
     
-    public function index(){
+    public function index()
+    {
         if(!auth()->user()->hasRole('admin')){
             return redirect()->back()->with('error', 'Sorry, You are not authorized');
         }
