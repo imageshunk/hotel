@@ -111,6 +111,9 @@ class RestuarentController extends Controller
     }
 
     public function list(){
+        if(Setting::first() == null){
+            return redirect('/settings')->with('error', 'Site Settings needs to be filled!');
+        }
         if(!auth()->user()->hasAnyRole(Role::all())){
             return redirect()->back()->with('error', 'Sorry, You are not authorized');
         }

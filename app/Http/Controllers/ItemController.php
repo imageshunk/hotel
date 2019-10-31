@@ -45,6 +45,9 @@ class ItemController extends Controller
      */
     public function create()
     {
+        if(Setting::first() == null){
+            return redirect('/settings')->with('error', 'Site Settings needs to be filled!');
+        }
         if(!auth()->user()->hasRole('admin')){
             return redirect()->back()->with('error', 'Sorry, You are not authorized');
         }
