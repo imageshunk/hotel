@@ -16,10 +16,10 @@
                 <table class="table table-striped">
                     <tbody>
                         <tr>
-                            <th>Guest Name</th>
-                            <th>Guest Id</th>
-                            <th>Guest Phone Number</th>
-                            <th>Organisation</th>
+                            <th>Guest</th>
+                            <th>ID</th>
+                            <th>Phone</th>
+                            <th>Org</th>
                             <th>Room Number</th>
                             <th>Room Type</th>
                             <th>Check In Date</th>
