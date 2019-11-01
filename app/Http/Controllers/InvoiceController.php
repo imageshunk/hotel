@@ -132,7 +132,7 @@ class InvoiceController extends Controller
             if($points){
                 $invoice->addMethod($result ." Dollars & " . $points . " Cents");
             }else{
-                $invoice->addMethod($result . "USD");
+                $invoice->addMethod($result . $setting->currency);
             }
             // 
             
@@ -256,7 +256,7 @@ class InvoiceController extends Controller
         if($points){
             $invoice->addMethod($result ." Dollars & " . $points . " Cents");
         }else{
-            $invoice->addMethod($result . "USD");
+            $invoice->addMethod($result . $setting->currency);
         }
         // 
         
@@ -364,7 +364,7 @@ class InvoiceController extends Controller
             if($points){
                 $invoice->addMethod($result ." Dollars & " . $points . " Cents");
             }else{
-                $invoice->addMethod($result . "USD");
+                $invoice->addMethod($result . $setting->currency);
             }
             // 
             
