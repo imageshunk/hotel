@@ -32,6 +32,9 @@ class CartController extends Controller
         if(!auth()->user()->hasAnyRole(Role::all())){
             return redirect()->back()->with('error', 'Sorry, You are not authorized');
         }
+        if($presents == null){
+            return redirect()->back()->with('error', 'Please select at one item!');
+        }
         $presents = $request->get('present');
         foreach($presents as $present){
             $amount = Item::find($present);
