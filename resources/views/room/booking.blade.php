@@ -41,7 +41,7 @@
                                 <td>{{$booking->check_in_date}}
                                 <br>{{$booking->check_in_time}}</td>
                                 <td>{{$booking->check_out_date}}
-                                <br>{{$booking->check_in_time}}</td>
+                                <br>{{$booking->check_out_time}}</td>
                                 <td>
                                     <?php $utilities = explode(",",$booking->utilities); ?>
                                     @foreach($utilities as $utility)
