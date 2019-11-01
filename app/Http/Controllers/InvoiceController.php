@@ -174,7 +174,7 @@ class InvoiceController extends Controller
         ->whereNotIn('status', ['rejected', 'cancelled'])
         ->get();
 
-        $address = str_replace(", ", "\n", $setting->address);
+        $address = str_replace(", ", "\r\n", $setting->address);
         // $address = htmlspecialchars($address);
 
         // $pdf = PDF::loadView('invoices.booking', compact(['setting', 'checkin', 'guest', 'room', 'package', 'orders']));
