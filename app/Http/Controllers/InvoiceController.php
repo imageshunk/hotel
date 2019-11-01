@@ -174,9 +174,6 @@ class InvoiceController extends Controller
         ->whereNotIn('status', ['rejected', 'cancelled'])
         ->get();
 
-        $address = str_replace(", ", "\r\n", $setting->address);
-        // $address = htmlspecialchars($address);
-
         // $pdf = PDF::loadView('invoices.booking', compact(['setting', 'checkin', 'guest', 'room', 'package', 'orders']));
         // return $pdf->stream('invoice.pdf');
 
@@ -192,7 +189,7 @@ class InvoiceController extends Controller
         $invoice->setReference("INV-".$checkin->id);   // Reference
         $invoice->setDate(date('M dS ,Y',time()));   //Billing Date
         $invoice->setTime(date('h:i:s A',time()));   //Billing Time
-        $invoice->setFrom(array($setting->hotel_name,$address,$setting->contact,$setting->website));
+        $invoice->setFrom(array($setting->hotel_name,$setting->address,$setting->contact,$setting->website));
         $invoice->setTo(array($guest->title.' '.$guest->name,$guest->email,$guest->mobile,$guest->country));
         
         $room_price = $checkin->total / $checkin->nights;
