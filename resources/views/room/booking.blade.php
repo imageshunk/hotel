@@ -49,9 +49,9 @@
                                 </td>
                                 <td>
                                     @if($booking->status == 'Room Service')
-                                        <span class="text-danger">Checked In</span>
+                                        <span class="bg-danger rounded p-1">Checked In</span>
                                     @else
-                                    <span class="text-success">{{$booking->status}}</span>
+                                    <span class="bg-success rounded p-1">{{$booking->status}}</span>
                                     @endif
                                 </td>
                                 <td>{{ \Carbon\Carbon::parse($booking->created_at)->format('d M, Y') }}</td>
