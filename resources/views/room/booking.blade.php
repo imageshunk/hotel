@@ -39,9 +39,7 @@
                                 <td>{{$room->room_number}}</td>
                                 <td>{{App\Package::find($booking->package)->package_name}}</td>
                                 <td>{{$booking->check_in_date}}
-                                <br>Time: {{\Carbon\Carbon::parse($booking->check_in_time)->format('H:i A')}}</td>
                                 <td>{{$booking->check_out_date}}
-                                <br>Time: {{\Carbon\Carbon::parse($booking->check_out_time)->format('H:i A')}}</td>
                                 <td>
                                     <?php $utilities = explode(",",$booking->utilities); ?>
                                     @foreach($utilities as $utility)
