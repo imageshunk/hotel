@@ -40,7 +40,8 @@
                                 <td>{{App\Package::find($booking->package)->package_name}}</td>
                                 <td>{{$booking->check_in_date}}
                                 <br>{{$booking->check_in_time}}</td>
-                                <td>{{$booking->check_out_date}}</td>
+                                <td>{{$booking->check_out_date}}
+                                <br>{{$booking->check_in_time}}</td>
                                 <td>
                                     <?php $utilities = explode(",",$booking->utilities); ?>
                                     @foreach($utilities as $utility)
