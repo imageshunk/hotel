@@ -116,7 +116,7 @@ Route::delete('/restuarent/delete/{id}', 'RestuarentController@destroy')->middle
 
 Route::post('/restuarent/order', 'RestuarentController@order')->middleware('web');
 
-Route::get('/restuarents/orders', 'RestuarentController@list')->middleware('web');
+Route::get('/restaurants/orders', 'RestuarentController@list')->middleware('web');
 
 Route::put('/restuarents/set-status/{id}', 'RestuarentController@setStatus')->middleware('web');
 

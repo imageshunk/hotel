@@ -9,7 +9,7 @@
     <div class="nav-tabs-custom">
         <ul class="nav nav-tabs">
             <li class="active"><a href="#room_service" data-toggle="tab" aria-expanded="true">ROOM SERVICE</a></li>
-            <li class=""><a href="#restuarent" data-toggle="tab" aria-expanded="false">RESTAURENT</a></li>
+            <li class=""><a href="#restuarent" data-toggle="tab" aria-expanded="false">RESTAURANT</a></li>
         </ul>
         <div class="tab-content">
             <div class="tab-pane active text-black" id="room_service">

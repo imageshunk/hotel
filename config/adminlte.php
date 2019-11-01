@@ -144,9 +144,9 @@ return [
                     'url'     => '/orders',
                 ],
                 [
-                    'text'    => 'Restuarent Orders',
+                    'text'    => 'Restaurant Orders',
                     'icon'    => 'circle',
-                    'url'     => '/restuarents/orders'
+                    'url'     => '/restaurants/orders'
                 ],
             ],
         ],
