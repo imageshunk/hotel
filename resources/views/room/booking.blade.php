@@ -22,8 +22,8 @@
                             <th>Org</th>
                             <th>Room Number</th>
                             <th>Room Type</th>
-                            <th>Check In Date</th>
-                            <th>Check Out Date</th>
+                            <th>Check In</th>
+                            <th>Check Out</th>
                             <th>Utilities</th>
                             <th>Status</th>
                             <th>Booked at</th>
@@ -39,6 +39,7 @@
                                 <td>{{$room->room_number}}</td>
                                 <td>{{App\Package::find($booking->package)->package_name}}</td>
                                 <td>{{$booking->check_in_date}}</td>
+                                <td>{{$booking->check_in_time}}</td>
                                 <td>{{$booking->check_out_date}}</td>
                                 <td>
                                     <?php $utilities = explode(",",$booking->utilities); ?>
