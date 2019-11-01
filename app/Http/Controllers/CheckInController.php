@@ -188,19 +188,19 @@ class CheckInController extends Controller
         ->get();
 
         if(count($check_other_checkin)>0){
-            $checkin->status = "Checked Out";
             $checkin->check_out_time = Carbon::now();
+            $checkin->status = "Checked Out";
             $checkin->save();
         }elseif(count($check_other_checkin2)>0){
-            $checkin->status = "Checked Out";
             $checkin->check_out_time = Carbon::now();
+            $checkin->status = "Checked Out";
             $room = Room::find($checkin->room_id);
             $room->room_status = "dirty";
             $room->save();
             $checkin->save();
         }else{
-            $checkin->status = "Checked Out";
             $checkin->check_out_time = Carbon::now();
+            $checkin->status = "Checked Out";
             $room = Room::find($checkin->room_id);
             $room->room_status = "dirty";
             $room->save();
