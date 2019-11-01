@@ -58,10 +58,10 @@
                                 <td>
                                     {!! Form::open(['action' => 'InvoiceController@booking', 'method' => 'POST','enctype' => 'multipart/form-data', 'id' => 'invoice-generate']) !!}
                                         {{Form::hidden('id', $booking->id)}}
-                                        <button type="submit" class="btn btn-small btn-primary"><i class="fas fa-file-invoice"></i></button>
+                                        <button type="submit" class="btn btn-small btn-success" title="Invoice"><i class="fas fa-file-invoice"></i></button>
                                     {!! Form::close() !!}
                                 </td>
-                                <td><a type="button" data-toggle="modal" data-target="#generate_{{$booking->id}}" class="btn btn-sm btn-primary">Generate Receipt</a></td>
+                                <td><a type="button" data-toggle="modal" data-target="#generate_{{$booking->id}}" class="btn btn-sm btn-primary" title="Generate Receipt"><i class="fas fa-print"></i></a></td>
                             </tr>
                         @endforeach
                     </tbody>
