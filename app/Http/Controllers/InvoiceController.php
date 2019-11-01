@@ -175,6 +175,7 @@ class InvoiceController extends Controller
         ->get();
 
         $address = str_replace(", ", "<br/>", $setting->address);
+        $address = htmlspecialchars($address);
 
         // $pdf = PDF::loadView('invoices.booking', compact(['setting', 'checkin', 'guest', 'room', 'package', 'orders']));
         // return $pdf->stream('invoice.pdf');
