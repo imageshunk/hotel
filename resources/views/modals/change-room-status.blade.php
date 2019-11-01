@@ -20,9 +20,6 @@
                 </div>
                 {{Form::hidden('_method','PUT')}}
             {!! Form::close() !!}
-            <div class="modal-footer">
-                <button type="button" class="btn btn-danger pull-left" data-dismiss="modal">Close</button>
-            </div>
         </div>
         <!-- /.modal-content -->
     </div>
