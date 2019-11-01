@@ -28,7 +28,7 @@
                         </tr>
                         @foreach($items as $item)
                             <tr>
-                                <td>{{$item->id}}</td>
+                                <td>{{$loop->iteration}}</td>
                                 <td>{{$item->item_name}}</td>
                                 <?php $setting = App\Setting::first(); ?>
                                 <td>{{$setting->currency}} {{$item->item_price}}</td>
