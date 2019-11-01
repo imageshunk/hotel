@@ -117,7 +117,7 @@ class CheckInController extends Controller
         $room->room_status = 'booked';
         $room->save();
         
-        return redirect('/availability')->with('success', 'Room Booked');
+        return redirect('/bookings')->with('success', 'Room Booked');
     }
 
     /**

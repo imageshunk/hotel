@@ -19,12 +19,14 @@
                         <tr>
                             <th style="width: 30px">Id</th>
                             <th>Room Type</th>
+                            <th>Price (Exluding Tax)</th>
                             <th colspan="2">Actions</th>
                         </tr>
                         @foreach($packages as $package)
                             <tr>
                                 <td>{{$package->id}}</td>
                                 <td>{{$package->package_name}}</td>
+                                <td>{{App\Setting::first()->currency}} {{$package->package_price}}</td>
                                 <?php $setting = App\Setting::first(); ?>
                                 <td><a href="/room-types/{{$package->id}}/edit" class="btn btn-primary">Edit</a></td>
                                 <td>

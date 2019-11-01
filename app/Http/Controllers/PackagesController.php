@@ -71,6 +71,7 @@ class PackagesController extends Controller
 
         $package = new Package;
         $package->package_name = $request->input('package_name');
+        $package->package_price = $request->input('package_price');
         $package->save();
 
         return redirect('/room-types')->with('success', 'Package Added');
@@ -109,6 +110,7 @@ class PackagesController extends Controller
 
         $package = Package::find($id);
         $package->package_name = $request->input('package_name');
+        $package->package_price = $request->input('package_price');
         $package->save();
 
         return redirect('/packages')->with('success', 'Package Updated');
