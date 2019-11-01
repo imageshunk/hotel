@@ -46,7 +46,7 @@
                                 <?php $setting = App\Setting::first(); ?>
                                 <td>{{$order->quantity}} x {{$item->item_price}} = {{$setting->currency}} {{$order->amount}}</td>
                                 <td style="text-transform:capitalize">{{$order->status}}</td>
-                                <td>{{ \Carbon\Carbon::parse($order->created_at)->diffForHumans() }}</td>
+                                <td>{{ \Carbon\Carbon::parse($order->created_at)->format('d M, Y H:i A') }}</td>
                                 @if($order->status == 'Order Placed')
                                     <td>
                                         <button type="button" data-toggle="modal" data-target="#order-{{$order->id}}" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></button>
