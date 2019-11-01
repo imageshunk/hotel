@@ -58,7 +58,7 @@
                                 <td>
                                     {!! Form::open(['action' => 'InvoiceController@booking', 'method' => 'POST','enctype' => 'multipart/form-data', 'id' => 'invoice-generate']) !!}
                                         {{Form::hidden('id', $booking->id)}}
-                                        {{Form::submit('Invoice', ['class' => 'btn btn-sm btn-success'])}}
+                                        <button type="submit" class="btn btn-small btn-primary"><i class="fas fa-file-invoice"></i></button>
                                     {!! Form::close() !!}
                                 </td>
                                 <td><a type="button" data-toggle="modal" data-target="#generate_{{$booking->id}}" class="btn btn-sm btn-primary">Generate Receipt</a></td>
@@ -83,3 +83,7 @@
 @section('css')
     <link rel="stylesheet" href="/css/admin_custom.css">
 @stop
+
+@section('js')
+    <script src="https://kit.fontawesome.com/e4ddbee142.js" crossorigin="anonymous"></script>
+@endsection
