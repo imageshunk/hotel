@@ -47,7 +47,13 @@
                                         <i>{{$option['utility']}}</i><br>
                                     @endforeach
                                 </td>
-                                <td>{{$booking->status}}</td>
+                                <td>
+                                    @if($booking->status == 'Room Service')
+                                        Checked In
+                                    @else
+                                        {{$booking->status}}
+                                    @endif
+                                </td>
                                 <td>{{ \Carbon\Carbon::parse($booking->created_at)->diffForHumans() }}</td>
                                 <td>
                                     {!! Form::open(['action' => 'InvoiceController@booking', 'method' => 'POST','enctype' => 'multipart/form-data', 'id' => 'invoice-generate']) !!}
