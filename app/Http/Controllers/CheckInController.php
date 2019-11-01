@@ -9,6 +9,7 @@ use App\Room;
 use Spatie\Permission\Models\Role;
 use Spatie\Permission\Models\Permission;
 use App\Setting;
+use Carbon\Carbon;
 
 class CheckInController extends Controller
 {
@@ -188,15 +189,18 @@ class CheckInController extends Controller
 
         if(count($check_other_checkin)>0){
             $checkin->status = "Checked Out";
+            $checkin->check_out_time = Carbon::now();
             $checkin->save();
         }elseif(count($check_other_checkin2)>0){
             $checkin->status = "Checked Out";
+            $checkin->check_out_time = Carbon::now();
             $room = Room::find($checkin->room_id);
             $room->room_status = "dirty";
             $room->save();
             $checkin->save();
         }else{
             $checkin->status = "Checked Out";
+            $checkin->check_out_time = Carbon::now();
             $room = Room::find($checkin->room_id);
             $room->room_status = "dirty";
             $room->save();
