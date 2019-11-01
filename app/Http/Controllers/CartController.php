@@ -33,7 +33,7 @@ class CartController extends Controller
             return redirect()->back()->with('error', 'Sorry, You are not authorized');
         }
         if($request->get('present') == null){
-            return redirect()->back()->with('error', 'Please select at one item!');
+            return redirect()->back()->with('error', 'Please select at least one item!');
         }
         $presents = $request->get('present');
         foreach($presents as $present){
