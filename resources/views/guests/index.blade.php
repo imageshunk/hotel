@@ -24,7 +24,7 @@
             <table class="table table-striped">
                 <thead>
                     <tr>
-                        <th style="width: 20px">ID</th>
+                        <th style="width: 20px">#</th>
                         <th>Name</th>
                         <th>Email</th>
                         <th>NIC/Passport</th>
@@ -37,7 +37,7 @@
                 <tbody>
                     @foreach($guests as $guest)
                         <tr>
-                            <td>{{$guest->id}}</td>
+                            <td>{{$loop->iteration}}</td>
                             <td>{{$guest->title}} {{$guest->name}}</td>
                             <td>{{$guest->email}}</td>
                             <td>{{$guest->passport}}</td>

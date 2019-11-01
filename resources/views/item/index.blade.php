@@ -18,7 +18,7 @@
                 <table class="table table-striped table-bordered">
                     <tbody>
                         <tr>
-                            <th>ID</th>
+                            <th>#</th>
                             <th>Item Name</th>
                             <th>Price</th>
                             <th>Available Quantity</th>
