@@ -38,8 +38,8 @@
                                 <?php $room = App\Room::where('id', $booking->room_id)->first(); ?>
                                 <td>{{$room->room_number}}</td>
                                 <td>{{App\Package::find($booking->package)->package_name}}</td>
-                                <td>{{$booking->check_in_date}}</td>
-                                <td>{{$booking->check_in_time}}</td>
+                                <td>{{$booking->check_in_date}}
+                                <br>{{$booking->check_in_time}}</td>
                                 <td>{{$booking->check_out_date}}</td>
                                 <td>
                                     <?php $utilities = explode(",",$booking->utilities); ?>
