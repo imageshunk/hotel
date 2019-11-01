@@ -69,7 +69,7 @@ class InvoiceController extends Controller
             $invoice->setTo(array($guest->title.' '.$guest->name,$guest->email,$guest->mobile,$guest->country));
             
             $room_price = $checkin->total / $checkin->nights;
-            $invoice->addItem($package->package_name,false,$checkin->nights.' Night',false,$room_price,false,$checkin->total);
+            $invoice->addItem($package->package_name,false,$checkin->nights.' Night(s)',false,$room_price,false,$checkin->total);
             $option_total = 0;
             if($checkin->utilities){
                 $utilities = explode(",",$checkin->utilities);
@@ -82,7 +82,7 @@ class InvoiceController extends Controller
             $total = 0;
             foreach($orders as $order){
                 $item = Item::find($order->item_id);
-                $invoice->addItem($item->item_name,$item->id,$order->quantity,false,$item->item_price,false,$order->amount);
+                $invoice->addItem($item->item_name,false,$order->quantity,false,$item->item_price,false,$order->amount);
                 $total += $order->amount;
             }
 
@@ -315,7 +315,7 @@ class InvoiceController extends Controller
             $total = 0;
             foreach($orders as $order){
                 $item = Item::find($order->item_id);
-                $invoice->addItem($item->item_name,$item->id,$order->quantity,false,$item->item_price,false,$order->amount);
+                $invoice->addItem($item->item_name,false,$order->quantity,false,$item->item_price,false,$order->amount);
                 $total += $order->amount;
             }
             
