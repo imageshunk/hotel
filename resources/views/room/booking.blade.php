@@ -54,7 +54,7 @@
                                         {{$booking->status}}
                                     @endif
                                 </td>
-                                <td>{{ \Carbon\Carbon::parse($booking->created_at)->diffForHumans() }}</td>
+                                <td>{{ \Carbon\Carbon::parse($booking->created_at)->format('d M, Y') }}</td>
                                 <td>
                                     {!! Form::open(['action' => 'InvoiceController@booking', 'method' => 'POST','enctype' => 'multipart/form-data', 'id' => 'invoice-generate']) !!}
                                         {{Form::hidden('id', $booking->id)}}
